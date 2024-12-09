@@ -276,7 +276,7 @@ def get_each_feat_missing(gfe, td, dim_list=[1,1,2,8,12,13,12,1,1,1,1,1,1,1,1,1,
         start_pos = sum(dim_list[:i])
         # end_pos = sum(dim_list[:i+1])
         _gfe[i] = gfe[start_pos]
-        _td[:, :, i] = td[:, :, start_pos]
+        _td[:, :, i] = td[:, :, start_pos] # 感觉是重新整合所有特征。
     return _gfe, _td
 
 
